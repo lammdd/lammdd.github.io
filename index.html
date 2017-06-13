@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+
+</head>
+<body>
+<div id="page">
+    <!--第一屏-->
+    <div class="section first">
+        <a href="javascript:;" class="logo"></a>
+        <div class="text">
+            <img src="images/text_1.png" alt=""/>
+            <img src="images/text_2.png" alt=""/>
+            <img src="images/text_3.png" alt=""/>
+            <img src="images/text_4.png" alt=""/>
+            <img src="images/text_5.png" alt=""/>
+            <img src="images/text_6.png" alt=""/>
+            <img src="images/text_7.png" alt=""/>
+            <img src="images/text_8.png" alt=""/>
+        </div>
+        <div class="info"></div>
+    </div>
+    <!--第二屛-->
+    <div class="section second">
+        <div class="shield">
+            <img src="images/shield_1.png" alt="">
+            <img src="images/shield_2.png" alt="">
+            <img src="images/shield_3.png" alt="">
+            <img src="images/shield_4.png" alt="">
+            <img src="images/shield_5.png" alt="">
+            <img src="images/shield_6.png" alt="">
+            <img src="images/shield_7.png" alt="">
+            <img src="images/shield_8.png" alt="">
+            <img src="images/shield_9.png" alt="">
+        </div>
+        <div class="info"></div>
+    </div>
+    <!--第三屏-->
+    <div class="section third">
+        <div class="third_left"></div>
+        <div class="third_right">
+            <div class="third_circle">
+                <div class="circle_plane"></div>
+            </div>
+        </div>
+    </div>
+    <!--第四屏-->
+    <div class="section fourth">
+        <div class="fourth_left">
+            <div class="input">
+                <div class="text"></div>
+            </div>
+            <div class="info"></div>
+        </div>
+        <div class="fourth_right"></div>
+    </div>
+    <!--第五屏-->
+    <div class="section fifth">
+        <div class="top"></div>
+        <div class="bottom">
+            <div class="tool"></div>
+            <div class="line lineleft"></div>
+            <div class="line lineright"></div>
+            <div class="line linetop"></div>
+            <div class="line linebottom"></div>
+            <div class="toolline">
+                <p></p>
+            </div>
+            <div class="bottomline"></div>
+            <div class="bottomtool"></div>
+            </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $("#page").fullpage({
+            sectionsColor:['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+            afterLoad:function(anchorLink,index){
+//                先去除之前的所有样式
+                $(".section").removeClass("current");
+//                再为当前屏添加样式
+                setTimeout(function(){
+                    $(".section").eq(index-1).addClass("current");
+                },1000)
+            }
+        })
+    })
+</script>
+</body>
+</html>
