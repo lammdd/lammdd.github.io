@@ -1,0 +1,303 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+section{
+    overflow: hidden;
+}
+.first {
+    overflow: hidden;
+}
+.first a {
+    width: 251px;
+    height: 186px;
+    display: block;
+    background: url(../images/logo.png);
+    margin:100px auto 0;
+}
+.first .text {
+    text-align: center;
+    margin-top:50px;
+}
+.first .text img {
+    margin-left:70px;
+    transition:margin-left 1s ;
+}
+.first .text img:nth-of-type(1){
+    margin-left:0px;
+}
+.first .info {
+    width: 772px;
+    height: 49px;
+    background: url(../images/info_1.png);
+    margin:0 auto;
+    margin-top:10px;
+}
+/*第一屏过渡*/
+.first.current .text img {
+    margin-left:10px;
+}
+/*第二屛*/
+.second {
+    position: relative;
+}
+.second .shield{
+    width: 440px;
+    font-size: 0;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-120%,-50%);
+}
+.second .info{
+    width: 635px;
+    height: 309px;
+    background: url(../images/info_2.png);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(0%,-50%);
+}
+.second .shield > img:nth-of-type(1){
+    transform: translate(100px,100px) rotate(30deg);
+}
+.second .shield > img:nth-of-type(2){
+    transform: translate(-100px,-100px) rotate(-30deg);
+}
+.second .shield > img:nth-of-type(3){
+    transform: translate(200px,200px) rotate(60deg);
+}
+.second .shield > img:nth-of-type(4){
+    transform: translate(-200px,-200px) rotate(-60deg);
+}
+.second .shield > img:nth-of-type(5){
+    transform: translate(150px,150px) rotate(90deg);
+}
+.second .shield > img:nth-of-type(6){
+    transform: translate(50px,150px) rotate(-90deg);
+}
+.second .shield > img:nth-of-type(7){
+    transform: translate(-150px,-150px) rotate(60deg);
+}
+.second .shield > img:nth-of-type(8){
+    transform: translate(10px,-250px) rotate(-90deg);
+}
+.second .shield > img:nth-of-type(9) {
+    transform: translate(-250px, 10px) rotate(45deg);
+}
+/*第二频过渡*/
+.second.current .shield > img {
+    transform: none;
+    transition: transform 1s;
+}
+/*第三屏*/
+.third {
+    position: relative;
+}
+.third .third_left {
+    width: 631px;
+    height: 278px;
+    background: url(../images/info_3.png);
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-120%,-50%);
+}
+.third .third_right {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(0%,-50%);
+}
+.third .third_right .third_circle {
+    background: url(../images/circle.png);
+    width: 453px;
+    height: 449px;
+    position: relative;
+}
+.third .circle_plane {
+    width: 203px;
+    height: 204px;
+    background: url(../images/rocket.png);
+    position: absolute;
+    left:-800px;
+    top:700px;
+}
+/*第三屏过渡*/
+.third.current .circle_plane {
+    left:125px;
+    top:125px;
+    transition: left 1s,top 1s;
+}
+/*第四屏*/
+.fourth {
+    position: relative;
+}
+.fourth .fourth_left{
+    width: 529px;
+    height: 438px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-120%,-50%);
+    overflow: hidden;
+}
+.fourth .input {
+    width: 529px;
+    height: 66px;
+    background: url(../images/search.png);
+    transform: translate(-100%);
+}
+.fourth .input .text {
+    background: url(../images/key.png);
+    /*width: 99px;*/
+    width: 0;
+    height: 22px;
+    position: absolute;
+    left:22px;
+    top:20px;
+}
+.fourth .info {
+    background: url(../images/result.png);
+    width: 529px;
+    /*height: 372px;*/
+    height: 0;
+    margin-top:-18px
+;
+}
+.fourth .fourth_right {
+    position: absolute;
+    width: 612px;
+    height: 299px;
+    background: url(../images/info_4.png);
+    left:50%;
+    top:50%;
+    transform: translate(0%,-50%);
+
+}
+/*第四屏过渡*/
+.fourth.current .input {
+    transform: none;
+    transition:transform 1s ;
+}
+.fourth.current .input .text {
+   width :100px;
+    transition:width 2s 1s steps(5);
+}
+.fourth.current .info {
+    height: 372px;
+    transition:height 1s 3s;
+}
+/*第五屛*/
+.fifth {
+    overflow: hidden;
+}
+.fifth > div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.fifth .top {
+    width: 100%;
+    height: 134px;
+    background: url(../images/info_5.png) no-repeat center center;
+    margin:30px 0;
+    }
+.fifth .bottom {
+    flex:1;
+    width: 1004px;
+    position: relative;
+    background-color: rgba(255,255,255,.2);
+}
+.fifth .bottom .tool {
+    width: 100%;
+    height: 79px;
+    opacity: 0;
+    background: url(../images/toolbar.png) center top no-repeat;
+}
+.line {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.fifth .bottom .lineleft {
+    width: 1px;
+    height: 100%;
+    left:0;
+    top:-100%;
+}
+.fifth .bottom .linetop {
+    height: 1px;
+   width: 100%;
+    left:100%;
+    top:0;
+}
+.fifth .bottom .lineright {
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 100%;
+}
+.fifth .bottom .linebottm {
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+.fifth .bottom .toolline {
+    top: 32px;
+    left: 70px;
+    position: absolute;
+    /*width: 920px;*/
+    width: 0;
+    overflow: hidden;
+}
+.fifth .bottom .toolline p {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    width: 100%;
+    height: 24px;
+}
+.fifth .bottom .bottomline {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 30px;
+}
+.fifth .bottom .bottomtool {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 394px;
+    height: 29px;
+    opacity: 0;
+    background: url(../images/extra.png);
+}
+/*第五屛过渡*/
+.fifth.current .bottom .lineleft {
+    top:0;
+    transition: top 1s;
+}
+.fifth.current .bottom .linetop {
+    left:0;
+    transition: left 1s;
+}
+.fifth.current .bottom .lineright {
+    top:0;
+    transition: top 1s;
+}
+.fifth.current .bottom .tool {
+    opacity: 1;
+    transition: opacity 1s;
+}
+.fifth.current .bottom .toolline {
+    width: 920px;
+    transition: width 1s;
+}
+.fifth.current .bottom .bottomtool {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
